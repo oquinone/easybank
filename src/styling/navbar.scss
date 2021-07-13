@@ -21,7 +21,7 @@ nav{
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 50em){
     nav{
         justify-content: space-between;
     }
@@ -39,12 +39,12 @@ nav{
         outline: none;
 
         img{
-            width: 35px;
+            width: 2.1875em;
         }
     }
 }
 
-@media screen and (min-width: 801px){
+@media screen and (min-width: 50.0625em){
     .three_Dashes{
         display: none;
     }

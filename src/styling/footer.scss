@@ -5,8 +5,8 @@
         flex-flow: row nowrap;
         background-color: hsl(233, 26%, 24%);
         color: white;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
         // border: 1px solid green;
 
         @include breakpoint-down(small){
@@ -31,11 +31,11 @@
         flex-flow: row nowrap;
 
         ul{
-            padding-right: 100px;
+            padding-right: 6.25em;
             list-style-type: none;
 
             li{
-                padding: 10px 0px;
+                padding: .625em 0;
 
                 &:hover{
                     color: green;
@@ -46,15 +46,15 @@
 
         @include breakpoint-down(medium){
             ul{
-                padding-right: 10px;
-                padding-left: 10px;
+                padding-right: .625em;
+                padding-left: .625em;
             }
         }
 
         @include breakpoint-down(small){
             flex-flow: column nowrap;
             ul{
-                padding-right: 0px;
+                padding-right: 0;
             }
 
             .test{
@@ -64,7 +64,7 @@
                 align-items: center;
             }
             li{
-                padding: 5px 0px;
+                padding: .3125em 0;
             }
         }
     }
@@ -73,11 +73,11 @@
         flex-flow: column nowrap;
 
         h6{
-            font-size: 11px;
+            font-size: .6875em;
         }
 
         @include breakpoint-down(small){
-           padding: 10px;
+           padding: .625em;
            text-align: center;
         }
     }

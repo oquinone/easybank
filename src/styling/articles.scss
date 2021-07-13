@@ -4,12 +4,12 @@
     &{
         flex-flow: column nowrap;
         background-color: hsl(0, 0%, 98%);
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding-top: 4.6875em;
+        padding-bottom: 4.6875em;
     }
 
     &-text{
-        font-size: 20px;
+        font-size: 1.25em;
 
         @include breakpoint-down(small){
             text-align: center;
@@ -17,8 +17,11 @@
     }
 
     &-container{
-        padding-top: 20px;
-        padding-bottom: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
 
         .cards{
             width: 23%;
@@ -26,18 +29,20 @@
     
             img{
                 width: 100%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                height: 12em;
+                object-fit: cover;
+                border-top-left-radius: .9375em;
+                border-top-right-radius: .9375em;
             }
 
             h3{
-                font-size: 16px;
-                margin: 0px 20px;
+                font-size: 1em;
+                margin: 0 1.25em;
             }
             
             p{
-                font-size: 14px;
-                margin: 5px 20px;
+                font-size: .875em;
+                margin: .3125em 1.25em;
                 line-height: 1.3rem;
             }
         }
@@ -46,22 +51,24 @@
             flex-flow: row wrap;
             .cards{
                 width: 45%;
-                margin-right: 0px;
-                margin: 10px;
+                margin-right: 0;
+                margin: .625em;
             }
         }
 
         @include breakpoint-down(small){
             .cards{
                 width: 100%;
-                margin: 15px 0px;
-
+                
+                img{
+                    height: 15em;
+                }
                 .artist{
-                    padding-top: 25px;
+                    padding-top: 1.5625em;
                 }
 
                 .info{
-                    padding-bottom: 25px;
+                    padding-bottom: 1.5625em;
                 }
             }
         }

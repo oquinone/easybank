@@ -15,7 +15,7 @@ class Articles extends Component {
                     <h1 className="text">Latest Articles</h1>
                 </div>
 
-                <div id="articles-container" className="flex-sb">
+                <div id="articles-container" >
                     <div className="cards">
                         <img src={Money} alt="money"/>
                         <p className="artist"> By Claire Robinson</p>

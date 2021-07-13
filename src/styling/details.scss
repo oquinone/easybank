@@ -4,8 +4,8 @@
     &{
         flex-flow: column nowrap;
         background-color: hsl(220, 16%, 96%);
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
     }
 
     &-text{
@@ -24,25 +24,25 @@
 
     &-container{
         flex-flow: row wrap;
-        margin: 25px 0px;
+        margin: 1.5625em 0;
         // border: 1px solid green;
 
         .cards{
             width: 22%;
 
             img{
-                padding-bottom: 30px;;
+                padding-bottom: 1.875em;
             }
 
             h3{
-                padding-bottom: 20px;
+                padding-bottom: .9375em;
             }
         }
 
         @include breakpoint-down(medium){
             .cards{
                 width: 48%;
-                margin: 5px;
+                margin: .3125em;
             }
         }
 
@@ -52,7 +52,7 @@
 
             .cards{
                 width: 100%;
-                margin: 10px 0px;
+                margin: .625em 0;
             }
         }
     }
