@@ -1,85 +1,84 @@
 @import "./mixins.scss";
 
-#footer{
-    &{
-        flex-flow: row nowrap;
-        background-color: hsl(233, 26%, 24%);
-        color: white;
-        padding-top: 1.25em;
-        padding-bottom: 1.25em;
-        // border: 1px solid green;
+#footer {
+  & {
+    flex-flow: row nowrap;
+    background-color: hsl(233, 26%, 24%);
+    color: white;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    // border: 1px solid green;
 
-        @include breakpoint-down(small){
-            flex-flow: column nowrap;
-            align-items: center;
+    @include breakpoint-down(small) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  &-logo-socials {
+    flex-flow: column nowrap;
+  }
+
+  &-socials {
+    ul {
+      flex-flow: row nowrap;
+      list-style-type: none;
+      align-items: flex-end;
+    }
+  }
+
+  &-links-container {
+    flex-flow: row nowrap;
+
+    ul {
+      padding-right: 6.25em;
+      list-style-type: none;
+
+      li {
+        padding: 0.625em 0;
+
+        &:hover {
+          color: green;
+          cursor: pointer;
         }
+      }
     }
 
-    &-logo-socials{
+    @include breakpoint-down(medium) {
+      ul {
+        padding-right: 0.625em;
+        padding-left: 0.625em;
+      }
+    }
+
+    @include breakpoint-down(small) {
+      flex-flow: column nowrap;
+      ul {
+        padding-right: 0;
+      }
+
+      .test {
+        display: flex;
         flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      li {
+        padding: 0.3125em 0;
+      }
+    }
+  }
+
+  &-btn-copyright {
+    flex-flow: column nowrap;
+
+    h6 {
+      font-size: 0.6875em;
     }
 
-    &-socials {
-        ul{
-            flex-flow: row nowrap;
-            list-style-type: none;
-            
-        }
+    @include breakpoint-down(small) {
+      padding: 0.625em;
+      text-align: center;
     }
-
-    &-links-container{
-        flex-flow: row nowrap;
-
-        ul{
-            padding-right: 6.25em;
-            list-style-type: none;
-
-            li{
-                padding: .625em 0;
-
-                &:hover{
-                    color: green;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        @include breakpoint-down(medium){
-            ul{
-                padding-right: .625em;
-                padding-left: .625em;
-            }
-        }
-
-        @include breakpoint-down(small){
-            flex-flow: column nowrap;
-            ul{
-                padding-right: 0;
-            }
-
-            .test{
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-evenly;
-                align-items: center;
-            }
-            li{
-                padding: .3125em 0;
-            }
-        }
-    }
-
-    &-btn-copyright{
-        flex-flow: column nowrap;
-
-        h6{
-            font-size: .6875em;
-        }
-
-        @include breakpoint-down(small){
-           padding: .625em;
-           text-align: center;
-        }
-    }
+  }
 }
-

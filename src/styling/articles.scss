@@ -1,77 +1,78 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 
-#articles{
-    &{
-        flex-flow: column nowrap;
-        background-color: hsl(0, 0%, 98%);
-        padding-top: 4.6875em;
-        padding-bottom: 4.6875em;
+#articles {
+  & {
+    flex-flow: column nowrap;
+    background-color: hsl(0, 0%, 98%);
+    padding-top: 4.6875em;
+    padding-bottom: 4.6875em;
+  }
+
+  &-text {
+    font-size: 1.25em;
+
+    @include breakpoint-down(small) {
+      text-align: center;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    .cards {
+      width: 23%;
+      background-color: hsl(0, 0%, 100%);
+      padding-bottom: 1em;
+
+      img {
+        width: 100%;
+        height: 12em;
+        object-fit: cover;
+        border-top-left-radius: 0.642em;
+        border-top-right-radius: 0.642em;
+      }
+
+      h3 {
+        font-size: 1em;
+        margin: 0 1.5rem;
+        padding: 0;
+        color: rgb(82, 74, 74);
+      }
+
+      .artist {
+        font-size: 0.7em;
+        margin: 0.5em 2em;
+        line-height: 1.3rem;
+        color: rgb(175, 175, 175);
+      }
+
+      .info {
+        font-size: 0.8em;
+        margin: 0.5em 2em;
+        line-height: 1.3rem;
+        color: rgb(175, 175, 175);
+      }
     }
 
-    &-text{
-        font-size: 1.25em;
-
-        @include breakpoint-down(small){
-            text-align: center;
-        }
+    @include breakpoint-down(medium) {
+      flex-flow: row wrap;
+      .cards {
+        width: 45%;
+        margin-right: 0;
+        margin: 0.625em;
+      }
     }
 
-    &-container{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        padding-top: 1.25em;
-        padding-bottom: 1.25em;
+    @include breakpoint-down(small) {
+      .cards {
+        width: 100%;
 
-        .cards{
-            width: 23%;
-            background-color: hsl(0, 0%, 100%);
-    
-            img{
-                width: 100%;
-                height: 12em;
-                object-fit: cover;
-                border-top-left-radius: .9375em;
-                border-top-right-radius: .9375em;
-            }
-
-            h3{
-                font-size: 1em;
-                margin: 0 1.25em;
-            }
-            
-            p{
-                font-size: .875em;
-                margin: .3125em 1.25em;
-                line-height: 1.3rem;
-            }
+        img {
+          height: 15em;
         }
-
-        @include breakpoint-down(medium){
-            flex-flow: row wrap;
-            .cards{
-                width: 45%;
-                margin-right: 0;
-                margin: .625em;
-            }
-        }
-
-        @include breakpoint-down(small){
-            .cards{
-                width: 100%;
-                
-                img{
-                    height: 15em;
-                }
-                .artist{
-                    padding-top: 1.5625em;
-                }
-
-                .info{
-                    padding-bottom: 1.5625em;
-                }
-            }
-        }
+      }
     }
+  }
 }
-
